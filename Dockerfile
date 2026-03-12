@@ -1,7 +1,7 @@
 FROM python:3.9-slim-bullseye
 
 ENV PYTHONUNBUFFERED=1
-ENV PYTHONPATH "${PYTHONPATH}:/app"
+ENV PYTHONPATH=/app
 
 WORKDIR /app
 COPY requirements.txt ./
