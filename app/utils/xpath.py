@@ -176,6 +176,26 @@ class Clubs:
             HEIGHTS = "//div[@id='yw1']//td[6]/text()"
             FOOTS = "//div[@id='yw1']//td[7]//text()"
 
+        class National:
+            PAGE_SIGNED_FROM = "//div[@id='yw1']//td[7]"
+            PAGE_JOINED_ON = "//div[@id='yw1']//td[9]"
+            CURRENT_CLUB = "//div[@id='yw1']//td[4]//img//@title"
+            HEIGHTS = "//div[@id='yw1']//td[5]//text()"
+            FOOTS = "//div[@id='yw1']//td[6]//text()"
+
+        # National team parsing via table.items (page may lack div#yw1)
+        class NationalTable:
+            ROWS = "//table[@class='items']//tbody//tr[.//a[contains(@href,'/profil/spieler/')]]"
+            PLAYER_HREF = ".//a[contains(@href,'/profil/spieler/')]/@href"
+            PLAYER_NAME = ".//a[contains(@href,'/profil/spieler/')]//text()"
+            POSITION = ".//td[2]//tr[2]//text()"
+            DOB_AGE_CELL = ".//td[3]//text()"
+            CLUB_IMG_TITLE = ".//td[4]//img//@title"
+            HEIGHT = ".//td[5]//text()"
+            FOOT = ".//td[6]//text()"
+            DEBUT = ".//td[9]//text()"
+            MARKET_VALUE = ".//td[@class='rechts hauptlink']//text()"
+
 
 class Competitions:
     class Profile:
