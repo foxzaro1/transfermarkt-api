@@ -149,17 +149,16 @@ class Clubs:
         PAST_FLAG = "//div[@id='yw1']//thead//text()"
         CLUB_NAME = "//header//h1//text()"
         CLUB_URL = "//li[@id='overview']//@href"
-        PAGE_NATIONALITIES = "//div[@id='yw1']//td[img[@class='flaggenrahmen']]"
-        PAGE_INFOS = "//div[@id='yw1']//td[@class='posrela']"
-        NAMES = "//div[@id='yw1']//td[@class='posrela']//a//text()"
-        # Ссылки на игроков: привязка к yw1 и contains для клубов/сборных с разными классами ячеек
-        URLS = "//div[@id='yw1']//td[contains(@class,'hauptlink')]//a[contains(@href,'/profil/spieler/')]//@href"
-        POSITIONS = "//div[@id='yw1']//td[@class='posrela']//tr[2]//text()"
+        PAGE_NATIONALITIES = "//td[img[@class='flaggenrahmen']]"
+        PAGE_INFOS = "//td[@class='posrela']"
+        NAMES = "//td[@class='posrela']//a//text()"
+        URLS = "//td[@class='hauptlink']//@href"
+        POSITIONS = "//td[@class='posrela']//tr[2]//text()"
         DOB_AGE = "//div[@id='yw1']//td[3]//text()"
         NATIONALITIES = ".//img//@title"
         JOINED = ".//span/node()/@title"
         SIGNED_FROM = ".//a//img//@title"
-        MARKET_VALUES = "//div[@id='yw1']//td[@class='rechts hauptlink']//text()"
+        MARKET_VALUES = "//td[@class='rechts hauptlink']//text()"
         STATUSES = ".//td[@class='hauptlink']//span//@title"
         JOINED_ON = ".//text()"
 
@@ -177,7 +176,6 @@ class Clubs:
             HEIGHTS = "//div[@id='yw1']//td[6]/text()"
             FOOTS = "//div[@id='yw1']//td[7]//text()"
 
-        # Сборные: колонки Club, Height, Foot, International matches, Goals, Debut, Market value
         class National:
             PAGE_SIGNED_FROM = "//div[@id='yw1']//td[7]"
             PAGE_JOINED_ON = "//div[@id='yw1']//td[9]"
